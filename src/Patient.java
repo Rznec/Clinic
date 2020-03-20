@@ -18,8 +18,6 @@ public class Patient {
     public String toString() {
         return lastName +
                 "  " + firstName +
-                "  " + secondName +
-                "  " + pol +
-                "  " + age;
+                "  " + secondName;
     }
 }
