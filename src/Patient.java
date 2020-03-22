@@ -6,14 +6,14 @@ public class Patient{
     private final String lastName;
     private final String firstName;
     private final String secondName;
-    private String pol;
+    private String gender;
     private int age;
 
-    public Patient(int id,String lastName, String firstName, String secondName, String pol, int age) {
+    public Patient(int id, String lastName, String firstName, String secondName, String gender, int age) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.secondName = secondName;
-        this.pol = pol;
+        this.gender = gender;
         this.age = age;
         this.id = id;
     }
@@ -24,6 +24,7 @@ public class Patient{
                 "  " + firstName +
                 "  " + secondName;
     }
+
     public void setId(int id){
         this.id = id;
     }
@@ -31,13 +32,12 @@ public class Patient{
     public int getId(){
         return this.id;
     }
-
-    public String getPol() {
-        return pol;
+    public String getGender() {
+        return gender;
     }
 
-    public void setPol(String pol) {
-        this.pol = pol;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public int getAge() {

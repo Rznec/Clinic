@@ -12,6 +12,7 @@ public class Menu {
     private static final String WELCOME = "\n\nДобро пожаловать!";
     private static final String ENTER_COMMAND = "\nВыберите интересующий вас раздел: \n 1) Регистация \n 2) Запись на прием \n 3) Выход из программы";
     private Scanner scannerIn = new Scanner(System.in);
+    private int command;
 
     LinkedHashMap<Integer, Patient> patients = new LinkedHashMap<>();
 
@@ -57,8 +58,10 @@ public class Menu {
      */
 
     public void menu() {
-            sayHello();
-            System.out.println(ENTER_COMMAND);
+        sayHello();
+        System.out.println(ENTER_COMMAND);
+        command = -200;
+        while (command != 3) {
             int command = scannerIn.nextInt();
             switch (command) {
                 case 1:
@@ -87,5 +90,6 @@ public class Menu {
                 default:
                     System.out.println("Неправильная команда! Попробуйте снова :)");
             }
+        }
     }
 }
